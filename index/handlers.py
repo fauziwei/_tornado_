@@ -27,7 +27,6 @@ class IndexHandler(BaseHandler):
 			'success': True,
 			'message': message
 		}) )
-		self.finish()
 
 
 	@gen.coroutine
