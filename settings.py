@@ -78,13 +78,7 @@ def configureLogging(logger_name, level=None, format=None):
 			'': {
 				'level': 'DEBUG',
 				'handlers': ['console', 'file']
-			},
-			# 'ftrack_api': {
-			# 	'level': 'INFO',
-			# },
-			# 'FTrackCore': {
-			# 	'level': 'INFO',
-			# }
+			}
 		}
 	}
 
