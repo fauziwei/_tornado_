@@ -11,8 +11,6 @@ class Cache:
 	This class is not only for session, but can do for other
 	work which is connected to redis.
 
-	http://jadianes.me/intro-redis-python
-
 	'''
 	def __init__(self, host='localhost', port=6379, db=0):
 
