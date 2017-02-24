@@ -1,12 +1,14 @@
 # coding: utf-8
-from tornado.web import url
+url_patterns = []
+'''
+format url is 'directory_{something}'
+e.g: '/auth_login/'
+''' 
 
-from auth.handlers import LoginHandler, LogoutHandler
-from index.handlers import IndexHandler, LongPoolHandler
+# authentication login and logout
+from auth import urls
+url_patterns.extend(urls.url_patterns)
 
-url_patterns = [
-	url(r'/', IndexHandler, name='index'),
-	url(r'/login/', LoginHandler, name='login'),
-	url(r'/logout/', LogoutHandler, name='logout'),
-	url(r'/longpool/', LongPoolHandler, name='longpool')
-]
+# home or index
+from home import urls
+url_patterns.extend(urls.url_patterns)

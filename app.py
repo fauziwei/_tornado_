@@ -5,12 +5,11 @@ from settings import settings
 import lib.cache as cache
 import lib.models as models
 
-# cd C:"\Previous Work\tornado-new-way-like-django"
 
 class Application(web.Application):
 
 	cache = cache
-	user_session = cache.Cache(host='localhost', port=6379, db=0)
+	user_session = cache.Cache(host='localhost', port=6379, db=3)
 
 	models = models
 

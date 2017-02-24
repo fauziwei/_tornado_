@@ -9,7 +9,7 @@ token = None
 try:
 	# 1st goto login page
 	# todo authorization.
-	url = 'http://localhost:8888/login/'
+	url = 'http://localhost:8888/auth_login/'
 	# r1 = requests.post(url, auth=('f', 'f'))
 	r1 = requests.post(url, auth=('admin', 'admin'))
 
@@ -84,7 +84,7 @@ if token is not None:
 
 # 4th longpool
 if token is not None:
-	url = 'http://localhost:8888/longpool/'
+	url = 'http://localhost:8888/home_longpool/'
 	try:
 		r4 = requests.get(
 			url,
@@ -103,7 +103,7 @@ if token is not None:
 
 # 5th sending, logout
 if token is not None:
-	url = 'http://localhost:8888/logout/'
+	url = 'http://localhost:8888/auth_logout/'
 	try:
 		r5 = requests.get(
 			url,

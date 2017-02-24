@@ -46,7 +46,7 @@ def authorization(f):
 
 		# Create auth token
 		token = '%s-%s' % (hashlib.sha1(email).hexdigest(), uuid.uuid4())
-		# self.token_user[token] = email
+
 		self.user_session.save(token, email)
 
 		self.user_session.expire(token, 604800) # 1 week
